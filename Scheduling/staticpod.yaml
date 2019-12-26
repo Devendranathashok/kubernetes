@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: pod
+metadata: 
+  name: staticpod-busybox
+spec:
+  containers:
+    - args:
+      - command:
+      - -- 
+      - Ssleep
+      - "1000" 
+    name: staticpod-busybox
+    image: busybox
+       
