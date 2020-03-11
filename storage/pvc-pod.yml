@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: pod
+metadata: 
+  name: webapp
+spec:
+  containers:
+  - name: webapp
+    image: devendranathashok/webapp
+    volumeMounts:
+    - mountPath: /log
+      name: log-volume
+
+  volumes:
+  - name: log-volume
+    persistentVolumeCliam:
+      claimName: claim-log-1    
